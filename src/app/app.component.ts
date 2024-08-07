@@ -1,6 +1,6 @@
 import { Store } from '@ngrx/store';
 import { Component, OnInit } from '@angular/core';
-import { selectBooks, selectBooksCollection } from './state/selectors/books.selectors';
+import { selectBooks, selectBookCollection } from './state/selectors/books.selectors';
 import { GoogleBooksService } from './services/books.service';
 import { BooksActions, BooksApiActions } from './state/actions/books.actions';
 
@@ -20,9 +20,10 @@ export class AppComponent implements OnInit {
   }
 
   books$ = this.store.select(selectBooks);
-  bookCollection$ = this.store.select(selectBooksCollection);
+  bookCollection$ = this.store.select(selectBookCollection);
 
   onAdd(bookId: string) {
+    console.log(bookId)
     this.store.dispatch(BooksActions.addBook({ bookId }));
   }
 

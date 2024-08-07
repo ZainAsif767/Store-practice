@@ -14,4 +14,4 @@ export const BooksApiActions = createActionGroup({
     events: {
         'Retrieved Book List': props<{ books: ReadonlyArray<Book> }>(),
     },
-})
+});

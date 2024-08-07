@@ -1,13 +1,13 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { map, Observable } from 'rxjs';
+import { Injectable } from '@angular/core';
+
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { Book } from '../models/books.model';
 
-@Injectable({
-  providedIn: 'root'
-})
-export class GoogleBooksService {
 
+@Injectable({ providedIn: 'root' })
+export class GoogleBooksService {
   constructor(private http: HttpClient) { }
 
   getBooks(): Observable<Array<Book>> {

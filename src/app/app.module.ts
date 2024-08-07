@@ -23,7 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    StoreModule.forRoot({ books: booksReducer, collect: collectionReducer, count: counterReducer })
+    StoreModule.forRoot({ books: booksReducer, collection: collectionReducer, count: counterReducer })
   ],
   providers: [],
   bootstrap: [AppComponent]

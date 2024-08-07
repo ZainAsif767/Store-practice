@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="inc-dec-btns">
+        <button (click)="increment()">Increment</button>
+        <div class="count">Current count: {{count$ | async}}</div>
+        <button (click)="decrement()">Decrement</button>
+    </div>
+    <div class="reset-btn">
+        <button (click)="reset()">Reset counter</button>
+    </div>
+</div>
